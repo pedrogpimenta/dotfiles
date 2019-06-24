@@ -9,3 +9,7 @@ run -b '~/.tmux/plugins/tpm/tpm'
 set -g prefix C-a
 unbind C-b
 bind C-a send-prefix
+
+# Fix for Vim colors
+set -g default-terminal "screen-256color"
+
