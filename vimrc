@@ -71,7 +71,7 @@ set laststatus=2
 set guioptions-=e " Don't use GUI tabs
 set guioptions-=r " Hide right scrollbar
 set guioptions-=L " Hide left scrollbar
-set guifont="Fira Code:h14" " Set font
+set guifont="Hack:h14" " Set font
 set colorcolumn=80 " Max recommended width
 
 " Search & Replace current selected text
@@ -92,12 +92,19 @@ endfunction
 
 function! StatuslineGit()
   let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+  return strlen(l:branchname) > 0?'  '.l:branchname.'':''
+endfunction
+
+function! Test()
+  let clean = system("git status | grep 'working tree clean'")
+  let changes = system("git status | grep 'no changes added to commit'")
+  return strlen(changes) > 0?'* ':''
 endfunction
 
 set statusline=
 set statusline+=%#PmenuSel#
 set statusline+=%{StatuslineGit()}
+set statusline+=%{Test()}
 "set statusline+=%#LineNr#
 set statusline+=%#CursorColumn#
 set statusline+=\ %f
