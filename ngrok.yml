@@ -1,0 +1,12 @@
+authtoken: 32rHSwstSTSa4Zi5yDjwF_81orsXdk8YAKHhHvjXdVd
+web_addr: localhost:4080
+tunnels:
+        ssh:
+                proto: tcp
+                addr: 0.0.0.0:22
+        http:
+                proto: http
+                addr: 0.0.0.0:8080
+        vnc:
+                proto: tcp
+                addr: 0.0.0.0:5900
