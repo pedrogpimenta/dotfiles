@@ -71,7 +71,7 @@ set laststatus=2
 set guioptions-=e " Don't use GUI tabs
 set guioptions-=r " Hide right scrollbar
 set guioptions-=L " Hide left scrollbar
-set guifont="Hack:h14" " Set font
+set guifont="Hack-Regular:h14" " Set font
 set colorcolumn=80 " Max recommended width
 
 " Search & Replace current selected text
@@ -85,35 +85,4 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 " Make current dir of current file
 " set autochdir
-
-function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-endfunction
-
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
-endfunction
-
-function! Test()
-  let clean = system("git status | grep 'working tree clean'")
-  let changes = system("git status | grep 'no changes added to commit'")
-  return strlen(changes) > 0?'* ':''
-endfunction
-
-set statusline=
-set statusline+=%#PmenuSel#
-set statusline+=%{StatuslineGit()}
-set statusline+=%{Test()}
-"set statusline+=%#LineNr#
-set statusline+=%#CursorColumn#
-set statusline+=\ %f
-set statusline+=%m
-set statusline+=%=
-set statusline+=%#CursorColumn#
-set statusline+=\ %y
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\ %p%%
-set statusline+=\ %l:%c
-set statusline+=\ 
 
