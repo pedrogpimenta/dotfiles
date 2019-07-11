@@ -80,6 +80,24 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " Enable indent columns
 let g:indent_guides_enable_on_vim_startup = 1
 
+" Start searching before hitting Enter
+set incsearch
+
+" Autoload file changes. Undo with `u`
+set autoread
+
+" Visual tab completion on commands
+set wildmenu
+
+" Show file position in statusbar
+set ruler
+
+" Give indent to next line. Deletes if nothing inserted
+set autoindent
+
+" Show more lines around cursor
+set scrolloff=6
+
 " Make Clipboard the same as system
 "set clipboard=unnamed
 
