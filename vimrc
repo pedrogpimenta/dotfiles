@@ -101,6 +101,9 @@ set autoindent
 " Show more lines around cursor
 set scrolloff=6
 
+" Show apostrophes on JSON files / IDENTLINE PLUGIN PROBLEM
+set conceallevel=0
+
 " Make Clipboard the same as system
 "set clipboard=unnamed
 
