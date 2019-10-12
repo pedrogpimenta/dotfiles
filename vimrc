@@ -119,3 +119,7 @@ let g:indentLine_char = '|'
 " Make current dir of current file
 " set autochdir
 
+" Set :W to write also
+command! W  write
+command! Wa  write all
+
