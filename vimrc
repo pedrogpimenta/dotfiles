@@ -107,6 +107,12 @@ set conceallevel=0
 " Keep indent of wrapped lines
 set breakindent
 
+" IndentLine plugin options
+"let g:indentLine_setColors = 0
+"let g:indentLine_color_term = 10 " This needs to work!
+let g:indentLine_color_gui = '#423E37'
+let g:indentLine_char = '|'
+
 " Make Clipboard the same as system
 "set clipboard=unnamed
 
