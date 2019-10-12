@@ -104,6 +104,9 @@ set scrolloff=6
 " Show apostrophes on JSON files / IDENTLINE PLUGIN PROBLEM
 set conceallevel=0
 
+" Keep indent of wrapped lines
+set breakindent
+
 " Make Clipboard the same as system
 "set clipboard=unnamed
 
