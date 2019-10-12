@@ -19,7 +19,8 @@ Plugin 'scrooloose/nerdtree'                    " File tree
 Plugin 'junegunn/fzf.vim'                       " Fuzzy finder with fzf
 Plugin 'Xuyuanp/nerdtree-git-plugin'            " Git status for file tree
 Plugin 'morhetz/gruvbox'                        " Great theme!
-Plugin 'nathanaelkane/vim-indent-guides'        " Add indent columns
+Plugin 'Yggdroot/indentLine'
+"Plugin 'nathanaelkane/vim-indent-guides'        " Add indent columns
 "Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line
