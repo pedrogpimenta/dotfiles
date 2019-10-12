@@ -72,7 +72,9 @@ set laststatus=2
 set guioptions-=e " Don't use GUI tabs
 set guioptions-=r " Hide right scrollbar
 set guioptions-=L " Hide left scrollbar
-set guifont="Hack-Regular:h14" " Set font
+"set guifont=Hack-Regular:h14 " Set font
+set guifont=SFMono-Regular:h14 " Set font
+set linespace=1
 set colorcolumn=80 " Max recommended width
 
 " Search & Replace current selected text
