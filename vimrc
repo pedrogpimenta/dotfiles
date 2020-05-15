@@ -36,9 +36,11 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 """""""" show built-in syntax highlighting
 syntax on
+set termguicolors
+set background=dark
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox " good theme dark/light
-set background=dark " set to `light` to change theme
-
+" use ;c to change theme
 
 """""""" My config
 
@@ -73,7 +75,8 @@ set guioptions-=e " Don't use GUI tabs
 set guioptions-=r " Hide right scrollbar
 set guioptions-=L " Hide left scrollbar
 "set guifont=Hack-Regular:h14 " Set font
-set guifont=SFMono-Regular:h14 " Set font
+"set guifont=SFMono-Regular:h14 " Set font
+set guifont=FiraCode-Regular:h12 " Set font
 set linespace=1
 set colorcolumn=80 " Max recommended width
 
@@ -102,7 +105,8 @@ set autoindent
 set scrolloff=6
 
 " Show apostrophes on JSON files / IDENTLINE PLUGIN PROBLEM
-set conceallevel=0
+let g:indentLine_setConceal = 0
+"set conceallevel=0
 
 " Keep indent of wrapped lines
 set breakindent
@@ -110,8 +114,8 @@ set breakindent
 " IndentLine plugin options
 "let g:indentLine_setColors = 0
 "let g:indentLine_color_term = 10 " This needs to work!
-let g:indentLine_color_gui = '#423E37'
-let g:indentLine_char = '|'
+"let g:indentLine_color_gui = '#423E37'
+"let g:indentLine_char = '|'
 
 " Make Clipboard the same as system
 "set clipboard=unnamed
@@ -122,6 +126,8 @@ let g:indentLine_char = '|'
 " Set :W to write also
 command! W  write
 command! Wa  write all
+
+nmap ;c :source ~/dotfiles/changetheme.vim
 
 " Show Tab things
 if exists("+showtabline")
